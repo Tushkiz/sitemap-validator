@@ -28,10 +28,13 @@ def validate(link):
 
 
 if __name__ == "__main__":
-    arguments = sys.argv
-    xml = get_xml_content(arguments[1])
-    current_domain = arguments[2]
-    test_domain = arguments[3]
-    xml = re.sub(current_domain, test_domain, xml, re.M)
-    for l in extract_links_from_sitemap(xml):
-        print(f'{validate(l)} - {l}')
+    try:
+        arguments = sys.argv
+        xml = get_xml_content(arguments[1])
+        current_domain = arguments[2]
+        test_domain = arguments[3]
+        xml = re.sub(current_domain, test_domain, xml, re.M)
+        for l in extract_links_from_sitemap(xml):
+            print(f'{validate(l)} - {l}')
+    except:
+        print('\nbye bye')
