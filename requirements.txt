@@ -11,7 +11,7 @@ macholib==1.9
 mccabe==0.6.1
 pefile==2017.11.5
 pylint==1.9.2
-requests==2.19.1
+requests==2.31.0
 six==1.11.0
 urllib3==1.26.5
 wrapt==1.10.11
